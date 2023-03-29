@@ -1,0 +1,22 @@
+{
+  "name": "slave2",
+  "private": true,
+  "author": "一碟茴香豆 <dengzhaoke@outlook.com>",
+  "scripts": {
+    "dev": "umi dev",
+    "build": "umi build",
+    "postinstall": "umi setup",
+    "setup": "umi setup",
+    "start": "npm run dev"
+  },
+  "dependencies": {
+    "antd": "^5.3.3",
+    "umi": "^4.0.63"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "@umijs/plugins": "^4.0.63",
+    "typescript": "^5.0.0"
+  }
+}
