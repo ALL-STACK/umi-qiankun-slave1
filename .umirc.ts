@@ -11,6 +11,13 @@ const shared = {
   },
 };
 
+const env = process.env.NODE_ENV;
+
+const mapKeyResolver = {
+  'production': 'PROD',
+  'development': 'DEV'
+}
+
 export default defineConfig({
   title: "7002",
   routes: [
@@ -35,10 +42,11 @@ export default defineConfig({
       {
         name: 'remoteCounter',
         entries: {
-          DEV: 'http://10.20.14.164:8000/remote.js',
-          PROD: 'https://production.com/remote.js',
+          DEV: 'http://localhost:8000/remote.js',
+          PROD: 'https://nebula.wh.ctrm/web/remote.js',
+          PRE: 'https://nebula.wh.ctrm/web/remote.js',
         },
-        keyResolver: `(()=> 'DEV')()`,
+        keyResolver: `(()=> '${mapKeyResolver[env] || 'PROD'}')()`,
       },
     ],
     shared,
