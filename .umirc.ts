@@ -3,13 +3,12 @@ import { defineConfig } from "umi";
 const shared = {
   react: {
     singleton: true,
-    // eager: true,
+    eager: true,
   },
   "react-dom": {
     singleton: true,
-    // eager: true,
+    eager: true,
   },
-  
 };
 
 export default defineConfig({
@@ -28,9 +27,8 @@ export default defineConfig({
     slave: {},
   },
   model: {},
-  // mfsu: {
-  //   mfName: 'slave2'
-  // },
+  // mfsu: false,
+  // antd: false,
   mf: {
     name: 'hostUser',
     remotes: [
